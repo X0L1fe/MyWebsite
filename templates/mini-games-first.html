@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{%block title %}Snake Game{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mini-games-first.css')}}">
+{% endblock %}
+
+{% block body %}
+<div class="scoreboard">
+    Очки: <span id="score">0</span>
+</div>
+
+<canvas width="400" height="400" id="game"></canvas>
+
+<script src="{{ url_for('static', filename='js/mini-games-first.js')}}" type="text/javascript" defer></script>
+{% endblock %}

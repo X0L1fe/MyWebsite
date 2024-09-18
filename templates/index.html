@@ -1,11 +1,41 @@
 {% extends 'base.html' %}
 
-{%block title %}{% endblock %}
+{% block title %}Home{% endblock %}
 
-{% block links %}
-
-{% endblock %}
+{% block links %}{% endblock %}
 
 {% block body %}
-INDEX!
+
+{% include 'load.html' %}
+
+<div id="content" style="display: none;">
+    <b>INDEX! maybe beautiful</b>
+</div>
+
+<script>
+    window.addEventListener('load', function () {
+        // Показываем контент через 10 секунд и скрываем лоадер
+        setTimeout(function () {
+            var loader = document.querySelector('.loader');
+            var content = document.getElementById('content');
+            if (loader) {
+                loader.style.display = 'none';  // Скрываем лоадер
+            }
+            if (content) {
+                content.style.display = 'block';  // Показываем контент
+            }
+
+        }, 10000); // 10 секунд
+
+    });
+
+    // Сбрасываем состояние лоадера при обновлении страницы
+    window.addEventListener('beforeunload', function () {
+        var loader = document.querySelector('.loader');
+        if (loader) {
+            loader.style.display = 'block'; // Отображаем лоадер при обновлении
+        }
+    });
+</script>
+
 {% endblock %}

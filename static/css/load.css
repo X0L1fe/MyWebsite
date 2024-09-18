@@ -1,0 +1,466 @@
+:root {
+  --bg: #141722;
+  --green: #464646;
+  --pink: #fa3cca;
+  --blue: #5956fa;
+  --orange: #ffffff;
+  --cyan: #ff0095;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+*::before, *::after {
+  display: none !important;
+}
+
+.comment {
+  font-family: "SUSE", sans-serif;
+  font-style: normal;
+  font-size: 25px;
+}
+
+.loader {
+  width: 60vw;
+  height: 60vh;
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.loader svg {
+  height: 50%;
+  width: 50%;
+  overflow: visible;
+
+}
+
+#bongo-cat {
+  fill: var(--bg);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+#bongo-cat .laptop-cover,
+#bongo-cat .headphone .band {
+  fill: none;
+}
+
+#bongo-cat .paw,
+#bongo-cat .head {
+  stroke: var(--orange);
+}
+
+#bongo-cat .laptop-keyboard {
+  stroke-width: 2;
+}
+
+#bongo-cat .laptop__terminal_code_scene {
+  stroke-width: 5;
+}
+
+#bongo-cat .music .note,
+#bongo-cat .laptop-base,
+#bongo-cat .laptop-cover,
+#bongo-cat .paw .pads {
+  stroke: var(--pink);
+}
+
+#bongo-cat .table line,
+#bongo-cat .headphone .band,
+#bongo-cat .headphone .speaker path:nth-child(3) {
+  stroke: var(--green);
+}
+
+#bongo-cat .laptop__terminal,
+#bongo-cat .laptop-keyboard,
+#bongo-cat .headphone .speaker path:nth-child(2) {
+  stroke: var(--blue);
+}
+
+#bongo-cat .laptop__terminal_code_scene,
+#bongo-cat .headphone .speaker path:first-child {
+  stroke: var(--cyan);
+}
+
+.typing-animation {
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 1200ms;
+  animation-duration: 1200ms;
+}
+
+path#f1-l1 {
+  -webkit-animation-name: typing-f1-l1;
+  animation-name: typing-f1-l1;
+}
+
+path#f1-l2 {
+  -webkit-animation-name: typing-f1-l2;
+  animation-name: typing-f1-l2;
+}
+
+path#f1-l3 {
+  -webkit-animation-name: typing-f1-l3;
+  animation-name: typing-f1-l3;
+}
+
+path#f2-l4 {
+  -webkit-animation-name: typing-f2-l4;
+  animation-name: typing-f2-l4;
+}
+
+path#f2-l5 {
+  -webkit-animation-name: typing-f2-l5;
+  animation-name: typing-f2-l5;
+}
+
+path#f2-l6 {
+  -webkit-animation-name: typing-f2-l6;
+  animation-name: typing-f2-l6;
+}
+
+path#f3-l7 {
+  -webkit-animation-name: typing-f3-l7;
+  animation-name: typing-f3-l7;
+}
+
+path#f3-l8 {
+  -webkit-animation-name: typing-f3-l8;
+  animation-name: typing-f3-l8;
+}
+
+path#f3-l9 {
+  -webkit-animation-name: typing-f3-l9;
+  animation-name: typing-f3-l9;
+}
+
+@-webkit-keyframes typing-f3-l9 {
+  0% {
+    d: path("M8,25L8,25");
+  }
+
+  82% {
+    d: path("M8,25L8,25");
+  }
+
+  92% {
+    d: path("M8,25L96,25");
+  }
+
+  100% {
+    d: path("M8,25L96,25");
+  }
+}
+
+@keyframes typing-f3-l9 {
+  0% {
+    d: path("M8,25L8,25");
+  }
+
+  82% {
+    d: path("M8,25L8,25");
+  }
+
+  92% {
+    d: path("M8,25L96,25");
+  }
+
+  100% {
+    d: path("M8,25L96,25");
+  }
+}
+
+@-webkit-keyframes typing-f3-l8 {
+  0% {
+    d: path("M8,13L8,13");
+  }
+
+  68% {
+    d: path("M8,13L8,13");
+  }
+
+  82% {
+    d: path("M8,13L146,13");
+  }
+
+  100% {
+    d: path("M8,13L146,13");
+  }
+}
+
+@keyframes typing-f3-l8 {
+  0% {
+    d: path("M8,13L8,13");
+  }
+
+  68% {
+    d: path("M8,13L8,13");
+  }
+
+  82% {
+    d: path("M8,13L146,13");
+  }
+
+  100% {
+    d: path("M8,13L146,13");
+  }
+}
+
+@-webkit-keyframes typing-f3-l7 {
+  0% {
+    d: path("M0,1L0,1");
+  }
+
+  60% {
+    d: path("M0,1L0,1");
+  }
+
+  68% {
+    d: path("M0,1L96,1");
+  }
+
+  100% {
+    d: path("M0,1L96,1");
+  }
+}
+
+@keyframes typing-f3-l7 {
+  0% {
+    d: path("M0,1L0,1");
+  }
+
+  60% {
+    d: path("M0,1L0,1");
+  }
+
+  68% {
+    d: path("M0,1L96,1");
+  }
+
+  100% {
+    d: path("M0,1L96,1");
+  }
+}
+
+@-webkit-keyframes typing-f2-l6 {
+  0% {
+    d: path("M8,25L8,25");
+  }
+
+  54% {
+    d: path("M8,25L8,25");
+  }
+
+  60% {
+    d: path("M8,25L69,25");
+  }
+
+  100% {
+    d: path("M8,25L69,25");
+  }
+}
+
+@keyframes typing-f2-l6 {
+  0% {
+    d: path("M8,25L8,25");
+  }
+
+  54% {
+    d: path("M8,25L8,25");
+  }
+
+  60% {
+    d: path("M8,25L69,25");
+  }
+
+  100% {
+    d: path("M8,25L69,25");
+  }
+}
+
+@-webkit-keyframes typing-f2-l5 {
+  0% {
+    d: path("M8,13L8,13");
+  }
+
+  44% {
+    d: path("M8,13L8,13");
+  }
+
+  54% {
+    d: path("M8,13L114,13");
+  }
+
+  100% {
+    d: path("M8,13L114,13");
+  }
+}
+
+@keyframes typing-f2-l5 {
+  0% {
+    d: path("M8,13L8,13");
+  }
+
+  44% {
+    d: path("M8,13L8,13");
+  }
+
+  54% {
+    d: path("M8,13L114,13");
+  }
+
+  100% {
+    d: path("M8,13L114,13");
+  }
+}
+
+@-webkit-keyframes typing-f2-l4 {
+  0% {
+    d: path("M0,1L0,1");
+  }
+
+  30% {
+    d: path("M0,1L0,1");
+  }
+
+  44% {
+    d: path("M0,1L136,1");
+  }
+
+  100% {
+    d: path("M0,1L136,1");
+  }
+}
+
+@keyframes typing-f2-l4 {
+  0% {
+    d: path("M0,1L0,1");
+  }
+
+  30% {
+    d: path("M0,1L0,1");
+  }
+
+  44% {
+    d: path("M0,1L136,1");
+  }
+
+  100% {
+    d: path("M0,1L136,1");
+  }
+}
+
+@-webkit-keyframes typing-f1-l3 {
+  0% {
+    d: path("M8,25L8,25");
+  }
+
+  24% {
+    d: path("M8,25L8,25");
+  }
+
+  30% {
+    d: path("M8,25L61,25");
+  }
+
+  100% {
+    d: path("M8,25L61,25");
+  }
+}
+
+@keyframes typing-f1-l3 {
+  0% {
+    d: path("M8,25L8,25");
+  }
+
+  24% {
+    d: path("M8,25L8,25");
+  }
+
+  30% {
+    d: path("M8,25L61,25");
+  }
+
+  100% {
+    d: path("M8,25L61,25");
+  }
+}
+
+@-webkit-keyframes typing-f1-l2 {
+  0% {
+    d: path("M8,13L8,13");
+  }
+
+  14% {
+    d: path("M8,13L8,13");
+  }
+
+  24% {
+    d: path("M8,13L124,13");
+  }
+
+  100% {
+    d: path("M8,13L124,13");
+  }
+}
+
+@keyframes typing-f1-l2 {
+  0% {
+    d: path("M8,13L8,13");
+  }
+
+  14% {
+    d: path("M8,13L8,13");
+  }
+
+  24% {
+    d: path("M8,13L124,13");
+  }
+
+  100% {
+    d: path("M8,13L124,13");
+  }
+}
+
+@-webkit-keyframes typing-f1-l1 {
+  0% {
+    d: path("M0,1L0,1");
+  }
+
+  14% {
+    d: path("M0,1L160,1");
+  }
+
+  100% {
+    d: path("M0,1L160,1");
+  }
+}
+
+@keyframes typing-f1-l1 {
+  0% {
+    d: path("M0,1L0,1");
+  }
+
+  14% {
+    d: path("M0,1L160,1");
+  }
+
+  100% {
+    d: path("M0,1L160,1");
+  }
+}
+
+#laptop__code {
+  transform: rotateX(-37deg) rotateY(-46deg) rotateZ(-23deg) translateX(8px) translateY(20px) translateZ(-50px);
+}
