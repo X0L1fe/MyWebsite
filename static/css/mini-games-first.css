@@ -1,14 +1,70 @@
-html, body {
-    height: 100%;
-    margin: 0;
-  }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-  body {
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  canvas {
-    border: 1px solid white;
-  }
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+canvas {
+  border: 1px solid white;
+}
+
+/* Стиль модальных окон */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: black;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+.modal button svg {
+  margin-right: 8px;
+}
+
+.scoreboard {
+  font-size: 24px;
+  margin-bottom: 20px;
+}

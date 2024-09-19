@@ -1,10 +1,29 @@
+document.addEventListener("DOMContentLoaded", function () {
+    feather.replace();
+});
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
 var scoreElement = document.getElementById('score');
 
+var animationFrameId;
+
 var grid = 16;
 var count = 0;
 var score = 0;
+
+var tips = [
+    "Не разворачивайтесь резко, это может привести к столкновению!",
+    "Старайтесь планировать движение на несколько ходов вперёд.",
+    "Используйте стены как инструмент для безопасных разворотов.",
+    "Старайтесь не загонять себя в углы, оставляйте пути для выхода.",
+    "Чем длиннее змейка, тем важнее сохранять спокойствие.",
+    "Не гонись за яблоком сразу, иногда лучше подождать.",
+    "Учись предугадывать своё следующее движение заранее.",
+    "Собирайте яблоки по порядку, избегая опасных маневров.",
+    "Змейка ускоряется, чем больше её длина — будьте внимательнее!",
+    "Используй всё пространство поля для оптимального движения."
+];
+var currentTipIndex = 0;
 
 var snake = {
     x: 160,
@@ -25,7 +44,6 @@ function getRandomInt(min, max) {
 }
 
 function resetGame() {
-    alert("Game Over! Your score: " + score);
     score = 0;
     scoreElement.textContent = score;
     snake.x = 160;
@@ -36,17 +54,18 @@ function resetGame() {
     snake.dy = 0;
     apple.x = getRandomInt(0, 25) * grid;
     apple.y = getRandomInt(0, 25) * grid;
+
+    showNextTip();
 }
 
 function checkWin() {
     if (score >= 5) {
-        alert("Поздравляю вы победили в одной из секретных игр!");
-        window.location.href = '/'; // перенаправление на главную страницу
+        showModal('winModal');
     }
 }
 
 function loop() {
-    requestAnimationFrame(loop);
+    animationFrameId = requestAnimationFrame(loop);
 
     if (++count < 4) {
         return;
@@ -96,11 +115,61 @@ function loop() {
 
         for (var i = index + 1; i < snake.cells.length; i++) {
             if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
-                resetGame();
+                showModal('gameOverModal'); // Показываем модальное окно при столкновении
+                cancelAnimationFrame(loop);
             }
         }
     });
 }
+
+function showNextTip() {
+    var tipElement = document.getElementById('gameOverTip'); // Элемент, куда будет выводиться совет
+    tipElement.textContent = tips[currentTipIndex]; // Устанавливаем текст совета
+
+    // Обновляем индекс для показа следующего совета в будущем
+    currentTipIndex++;
+    if (currentTipIndex >= tips.length) {
+        currentTipIndex = 0; // Если советы закончились, начинаем сначала
+    }
+}
+// Функция для показа модальных окон
+function showModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+}
+
+// Функция для скрытия модальных окон
+function hideModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+    document.body.focus();
+}
+
+// События кнопок
+document.getElementById('startGameBtn').addEventListener('click', function () {
+    hideModal('welcomeModal');
+    requestAnimationFrame(loop);
+});
+
+document.getElementById('retryBtn').addEventListener('click', function () {
+    hideModal('gameOverModal');
+    resetGame();
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = requestAnimationFrame(loop)
+});
+
+document.getElementById('exitBtn').addEventListener('click', function () {
+    window.location.href = '/';
+});
+
+document.getElementById('replayBtn').addEventListener('click', function () {
+    hideModal('winModal');
+    resetGame();
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = requestAnimationFrame(loop)
+});
+
+document.getElementById('exitWinBtn').addEventListener('click', function () {
+    window.location.href = '/';
+});
 
 document.addEventListener('keydown', function (e) {
     if (e.which === 37 && snake.dx === 0) {
@@ -117,5 +186,5 @@ document.addEventListener('keydown', function (e) {
         snake.dx = 0;
     }
 });
-
-requestAnimationFrame(loop);
+// Показ приветственного окна при загрузке страницы
+showModal('welcomeModal');

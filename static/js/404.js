@@ -60,3 +60,9 @@ $(document).ready(function() {
 $replayIcon.on('click', function() {
   splitTextTimeline.restart();
 });
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+      window.location.href = '/not-found/first-game';
+  }
+});

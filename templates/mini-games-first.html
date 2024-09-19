@@ -3,15 +3,52 @@
 {%block title %}Snake Game{% endblock %}
 
 {% block links %}
+<script src="https://unpkg.com/feather-icons" defer></script>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/mini-games-first.css')}}">
 {% endblock %}
 
 {% block body %}
-<div class="scoreboard">
-    Очки: <span id="score">0</span>
+<!-- Счёт -->
+<div class="scoreboard">Счёт: <span id="score">0</span></div>
+
+<!-- Игровое поле -->
+<canvas width="400" height="400" id="game"></canvas>
+
+<!-- Модальные окна -->
+<!-- Модальное окно приветствия -->
+<div class="modal" id="welcomeModal">
+    <div class="modal-content">
+        <h2>Добро пожаловать в Snake Game!</h2>
+        <p>Наберите 30 очков, чтобы победить. Не столкнитесь с собственным телом!<br>
+            Прикоснитесь к стрелкам на клавиатуре для управления змейкой.<br>
+            Удачи!
+        </p>
+        <button id="startGameBtn"><i data-feather="play"></i> Начать игру</button>
+    </div>
 </div>
 
-<canvas width="400" height="400" id="game"></canvas>
+<!-- Модальное окно проигрыша -->
+<div class="modal" id="gameOverModal">
+    <div class="modal-content">
+        <h2>Game Over<br>ваш счёт: <span id="score">0</span></h2>
+        <p>Совет: <p id="gameOverTip">Попробуйте держаться подальше от стен и не разворачиваться резко!</p>
+        <button id="retryBtn"><i data-feather="rotate-cw"></i> Повторить попытку</button>
+        <button id="exitBtn"><i data-feather="log-out"></i> Выйти на главную</button>
+    </div>
+</div>
+
+<!-- Модальное окно победы -->
+<div class="modal" id="winModal">
+    <div class="modal-content">
+        <h2>Поздравляем, вы выиграли!<br>
+            Счёт: <span id="score" class="scoreboard">0</span>
+        </h2>
+        
+        <button id="replayBtn"><i data-feather="rotate-cw"></i> Сыграть снова</button>
+        <button id="donateBtn"><i data-feather="heart"></i> Пожертвовать</button>
+        <button id="exitWinBtn"><i data-feather="log-out"></i> Выйти на главную</button>
+    </div>
+</div>
 
 <script src="{{ url_for('static', filename='js/mini-games-first.js')}}" type="text/javascript" defer></script>
 {% endblock %}
