@@ -6,15 +6,14 @@
   <meta charset="utf-8">
   <meta name="keywords" content="">
   <meta name="description" content="">
+  <title>about</title>
   <link rel="icon" href="{{ url_for('static', filename='images/logo_clear.png')}}"><!--иконка страницы-->
-  <title>home</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/nicepage.css')}}" media="screen">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}" media="screen">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css')}}" media="screen">
   <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js')}}"
     defer=""></script>
   <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/nicepage.js')}}"
     defer=""></script>
-  <meta name="generator" content="Nicepage 6.18.5, nicepage.com">
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
 
@@ -24,7 +23,7 @@
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "MyWeb",
-		"logo": "{{ url_for('static', filename='images/logo.png')}}",
+		"logo": "images/logo.png",
 		"sameAs": [
 				"https://t.me/Inrigt",
 				"https://vk.com/inrigt",
@@ -33,14 +32,13 @@
 		]
 }</script>
   <meta name="theme-color" content="#478ac9">
-  <meta property="og:title" content="home">
+  <meta property="og:title" content="about">
   <meta property="og:description" content="">
   <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/">
 </head>
 
-<body data-home-page="home.html" data-home-page-title="home" data-path-to-root="./" data-include-products="false"
-  class="u-body u-overlap u-overlap-contrast u-overlap-transparent u-xl-mode" data-lang="ru">
+<body data-path-to-root="/" data-include-products="false" class="u-body u-overlap u-xl-mode" data-lang="ru">
   <header class="u-clearfix u-header u-sticky u-sticky-86e3 u-header" id="sec-0a59" data-animation-name=""
     data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
     <div class="u-clearfix u-sheet u-sheet-1">
@@ -106,23 +104,25 @@
       </nav>
     </div>
   </header>
-  <section class="u-black u-clearfix u-section-1" id="sec-d8bb">
-    <div class="u-clearfix u-sheet u-valign-bottom-xs u-sheet-1">
-      <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+  <section class="u-black u-clearfix u-section-1" id="sec-450e">
+    <div class="u-clearfix u-sheet u-valign-bottom-sm u-valign-bottom-xs u-sheet-1">
+      <div
+        class="data-layout-selected u-clearfix u-expanded-width-sm u-expanded-width-xs u-layout-wrap u-layout-wrap-1">
         <div class="u-layout">
           <div class="u-layout-row">
             <div class="u-size-32">
               <div class="u-layout-row">
                 <div class="u-container-style u-layout-cell u-size-60 u-layout-cell-1">
-                  <div class="u-container-layout u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-1">
+                  <div class="u-container-layout u-valign-top-xs u-container-layout-1">
                     <div class="u-shape u-shape-circle u-white u-shape-1"></div>
-                    <h5 class="u-align-left u-text u-text-1">ОБО МНЕ</h5>
-                    <p class="u-align-justify u-custom-font u-heading-font u-text u-text-2"> Здравствуйте! Я, Лифанов
-                      Роман — целеустремленный разработчик с опытом коммерческой разработки, готовый постоянно учиться и
-                      совершенствовать свои навыки. Если я чего-то не знаю или не понимаю, не стесняюсь спрашивать,
-                      чтобы быстро разобраться и двигаться дальше.<br>Программированием занимаюсь с 2021 года, с каждым
-                      месяцем база знаний пополняется, а опыт растёт.&nbsp;
-                    </p>
+                    <h5 class="u-align-left u-text u-text-1"> Стэк технологий </h5>
+                    <ul class="u-align-justify u-text u-text-2">
+                      <li> Backend: Python, JavaScript (Node.js)</li>
+                      <li>Frontend: HTML, CSS, JavaScript</li>
+                      <li>Фреймворки и библиотеки: Django, Flask, Pillow, Telebot, Aiogram, Express.js, Pupeteer,
+                        ​Beautiful Soup</li>
+                      <li>Базы данных: SQLite3, PostgreSQL</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -132,8 +132,9 @@
                 <div
                   class="u-align-center u-black u-container-align-center-lg u-container-align-center-md u-container-align-center-xl u-container-style u-layout-cell u-size-60 u-layout-cell-2">
                   <div class="u-container-layout u-valign-top u-container-layout-2">
-                    <div class="u-image u-image-circle u-image-1" data-image-width="2448" data-image-height="3264">
-                    </div>
+                    <img class="custom-expanded u-image u-image-1"
+                      src="{{ url_for('static', filename='images/Code_D8S0i9YvCf1.png')}}" data-image-width="744"
+                      data-image-height="613">
                     <div class="u-shape u-shape-circle u-white u-shape-2"></div>
                   </div>
                 </div>
@@ -150,68 +151,66 @@
   <footer class="u-align-center u-clearfix u-container-align-center u-custom-color-1 u-footer u-footer" id="sec-b4ad">
     <div
       class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-      <div
-        class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <div class="u-social-icons u-spacing-10 u-social-icons-1">
-          <a class="u-social-url" title="Telegram" target="_blank" href="https://t.me/Inrigt"><span
-              class="u-file-icon u-icon u-social-facebook u-social-icon u-icon-1"><img
-                src="{{ url_for('static', filename='images/image.png')}}" alt=""></span>
-          </a>
-          <a class="u-social-url" title="VK" target="_blank" href="https://vk.com/inrigt"><span
-              class="u-file-icon u-icon u-social-icon u-social-twitter u-icon-2"><img
-                src="{{ url_for('static', filename='images/image2.png')}}" alt=""></span>
-          </a>
-          <a class="u-social-url" title="github" target="_blank" href="https://github.com/X0L1fe"><span
-              class="u-file-icon u-icon u-social-icon u-social-instagram u-icon-3"><img
-                src="{{ url_for('static', filename='images/github1.png')}}" alt=""></span>
-          </a>
-          <a class="u-social-url" target="_blank" data-type="Custom" title="E-mail"
-            href="mailto:lighttolight228@gmail.com?cc=lighttolight228%40gmail.com"><span
-              class="u-file-icon u-icon u-social-custom u-social-icon u-icon-4"><img
-                src="{{ url_for('static', filename='images/email.png')}}" alt=""></span>
-          </a>
-        </div>
-        <div class="u-clearfix u-group-elements u-group-elements-1">
-          <p class="u-custom-font u-heading-font u-small-text u-text u-text-variant u-text-1">Контакты</p>
-          <p class="u-align-justify u-text u-text-2">
-            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-text-white u-btn-1"
-              data-href="#" href="https://vk.com/inrigt"><span class="u-file-icon u-icon u-icon-5"><img
-                  src="{{ url_for('static', filename='images/image2.png')}}" alt=""></span>&nbsp;VK
-            </a>
-          </p>
-          <p class="u-align-justify u-text u-text-3">
-            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-text-white u-btn-2"
-              data-href="#" href="mailto:lighttolight228@gmail.com"><span class="u-file-icon u-icon u-icon-6"><img
-                  src="{{ url_for('static', filename='images/email.png')}}" alt=""></span>&nbsp;​E-mail
-            </a>
-          </p>
-          <p class="u-align-justify u-text u-text-4">
-            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-text-white u-btn-3"
-              data-href="#" href="https://t.me/Inrigt" target="_blank"><span class="u-file-icon u-icon u-icon-7"><img
-                  src="{{ url_for('static', filename='images/image.png')}}" alt=""></span>&nbsp;Telegram
-            </a>
-          </p>
-        </div>
-        <div class="u-clearfix u-group-elements u-group-elements-2">
-          <a href="#" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
-            <img src="{{ url_for('static', filename='images/logo.png')}}" class="u-logo-image u-logo-image-1">
-          </a>
-          <p class="u-align-right u-custom-font u-heading-font u-text u-text-5">Данный сайт предоставляет подробную
-            информацию о разработчике и является его собственностью.</p>
-          <p class="u-custom-font u-heading-font u-text u-text-6"> © 2024 Роман (X0L1fe) Лифанов</p>
-        </div>
-        <div class="u-clearfix u-group-elements u-group-elements-3">
-          <p class="u-heading-font u-text u-text-7">Навигация по сайту: </p>
-          <a href="./"
-            class="u-active-none u-border-none u-btn u-button-style u-custom-font u-heading-font u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-btn-4">Главная</a>
-          <a href="/about"
-            class="u-active-none u-border-none u-btn u-button-style u-custom-font u-heading-font u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-btn-5">Стэк
-            технологий</a>
-          <a href="/contacts"
-            class="u-active-none u-border-none u-btn u-button-style u-custom-font u-heading-font u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-btn-6">Контакты</a>
-        </div>
-        <p class="u-heading-font u-text u-text-8"> Политики конфиденциальности и Условий использования</p>
+      <div class="u-social-icons u-spacing-10 u-social-icons-1">
+        <a class="u-social-url" title="Telegram" target="_blank" href="https://t.me/Inrigt"><span
+            class="u-file-icon u-icon u-social-facebook u-social-icon u-icon-1"><img
+              src="{{ url_for('static', filename='images/image.png')}}" alt=""></span>
+        </a>
+        <a class="u-social-url" title="VK" target="_blank" href="https://vk.com/inrigt"><span
+            class="u-file-icon u-icon u-social-icon u-social-twitter u-icon-2"><img
+              src="{{ url_for('static', filename='images/image2.png')}}" alt=""></span>
+        </a>
+        <a class="u-social-url" title="github" target="_blank" href="https://github.com/X0L1fe"><span
+            class="u-file-icon u-icon u-social-icon u-social-instagram u-icon-3"><img
+              src="{{ url_for('static', filename='images/github1.png')}}" alt=""></span>
+        </a>
+        <a class="u-social-url" target="_blank" data-type="Custom" title="E-mail"
+          href="mailto:lighttolight228@gmail.com?cc=lighttolight228%40gmail.com"><span
+            class="u-file-icon u-icon u-social-custom u-social-icon u-icon-4"><img
+              src="{{ url_for('static', filename='images/email.png')}}" alt=""></span>
+        </a>
       </div>
+      <div class="u-clearfix u-group-elements u-group-elements-1">
+        <p class="u-custom-font u-heading-font u-small-text u-text u-text-variant u-text-1">Контакты</p>
+        <p class="u-align-justify u-text u-text-2">
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-text-white u-btn-1"
+            data-href="#" href="https://vk.com/inrigt"><span class="u-file-icon u-icon u-icon-5"><img
+                src="{{ url_for('static', filename='images/image2.png')}}" alt=""></span>&nbsp;VK
+          </a>
+        </p>
+        <p class="u-align-justify u-text u-text-3">
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-text-white u-btn-2"
+            data-href="#" href="mailto:lighttolight228@gmail.com"><span class="u-file-icon u-icon u-icon-6"><img
+                src="{{ url_for('static', filename='images/email.png')}}" alt=""></span>&nbsp;​E-mail
+          </a>
+        </p>
+        <p class="u-align-justify u-text u-text-4">
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-text-white u-btn-3"
+            data-href="#" href="https://t.me/Inrigt" target="_blank"><span class="u-file-icon u-icon u-icon-7"><img
+                src="{{ url_for('static', filename='images/image.png')}}" alt=""></span>&nbsp;Telegram
+          </a>
+        </p>
+      </div>
+      <div class="u-clearfix u-group-elements u-group-elements-2">
+        <a href="#" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
+          <img src="{{ url_for('static', filename='images/logo.png')}}" class="u-logo-image u-logo-image-1">
+        </a>
+        <p class="u-align-right u-custom-font u-heading-font u-text u-text-5">Данный сайт предоставляет подробную
+          информацию о разработчике и является его собственностью.</p>
+        <p class="u-custom-font u-heading-font u-text u-text-6"> © 2024 Роман (X0L1fe) Лифанов</p>
+      </div>
+      <div class="u-clearfix u-group-elements u-group-elements-3">
+        <p class="u-heading-font u-text u-text-7">Навигация по сайту: </p>
+        <a href="/"
+          class="u-active-none u-border-none u-btn u-button-style u-custom-font u-heading-font u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-btn-4">Главная</a>
+        <a href="/about"
+          class="u-active-none u-border-none u-btn u-button-style u-custom-font u-heading-font u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-btn-5">Стэк
+          технологий</a>
+        <a href="/contacts"
+          class="u-active-none u-border-none u-btn u-button-style u-custom-font u-heading-font u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-btn-6">Контакты</a>
+      </div>
+      <p class="u-heading-font u-text u-text-8"> Политики конфиденциальности и Условий использования</p>
+    </div>
   </footer>
 </body>
 

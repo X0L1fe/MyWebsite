@@ -16,6 +16,9 @@ body {
 
 canvas {
   border: 1px solid white;
+  width: 100%; /* Добавил, чтобы canvas занимал полную ширину родителя */
+  max-width: 400px; /* Ограничение максимальной ширины */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
 }
 
 /* Стиль модальных окон */
@@ -37,6 +40,7 @@ canvas {
   border-radius: 8px;
   text-align: center;
   color: black;
+  max-width: 90%; /* Ограничение ширины модальных окон на мобильных */
 }
 
 .modal-content h2 {
@@ -67,4 +71,35 @@ canvas {
 .scoreboard {
   font-size: 24px;
   margin-bottom: 20px;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 768px) {
+  canvas {
+    max-width: 300px;
+  }
+
+  .scoreboard {
+    font-size: 20px;
+  }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 480px) {
+  canvas {
+    max-width: 200px;
+  }
+
+  .scoreboard {
+    font-size: 18px;
+  }
+
+  .modal-content {
+    max-width: 100%; /* Модальные окна занимают полную ширину на мобильных */
+  }
+
+  .modal button {
+    font-size: 14px; /* Уменьшаем размер кнопок на мобильных */
+    padding: 8px;
+  }
 }

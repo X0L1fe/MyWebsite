@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
-.center-xy {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-}
 
+/* Базовые стили */
 html, body {
   font-family: "Roboto Mono", monospace;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 html {
@@ -19,29 +20,52 @@ html {
           user-select: none;
 }
 
-body {
-  background-color: #000;
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+body {
+  background-color: #000;
+}
+
+/* Стиль для контейнеров */
 .container {
   width: 100%;
+  text-align: center;
 }
 
 .copy-container {
   text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 p {
   color: #fff;
   font-size: 24px;
   letter-spacing: 0.2px;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
+.link {
+  color: #fff; 
+  text-decoration: none; 
+  transition: color 0.5s ease;
+}
+
+.link:hover {
+  color: #ffe500;
+}
+
+/* Анимация мерцающего курсора */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Стиль для ручки (handle) */
 .handle {
   background: #ffe500;
   width: 14px;
@@ -50,8 +74,11 @@ p {
   left: 0;
   margin-top: 1px;
   position: absolute;
+  animation: blink 0.9s step-end infinite;
+  transition: left 0.2s ease, top 0.2s ease;
 }
 
+/* Стиль для SVG */
 #cb-replay {
   fill: #666;
   width: 20px;
@@ -62,25 +89,42 @@ p {
   overflow: inherit;
   cursor: pointer;
 }
+
 #cb-replay:hover {
   fill: #888;
 }
 
-.link {
-  color: #fff; /* Цвет ссылки */
-  text-decoration: none; /* Убираем подчеркивание */
-  transition: color 0.5s ease
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  p {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  #cb-replay {
+    width: 30px; /* Увеличение размера SVG на мобильных */
+  }
+  
+  .handle {
+    width: 10px;
+    height: 20px;
+  }
 }
 
-.link:hover {
-  text-decoration: underline; /* Добавляем подчеркивание при наведении */
-  color: #ffe500;
-}
+@media (max-width: 480px) {
+  p {
+    font-size: 16px;
+  }
 
-.char {
-  display: inline-block; /* Для корректной анимации символов */
-}
+  .container {
+    padding: 0 10px;
+  }
 
-a .char {
-  cursor: pointer; /* Курсор меняется на указатель при наведении на символы в ссылке */
+  .handle {
+    width: 10px;
+    height: 20px;
+  }
 }

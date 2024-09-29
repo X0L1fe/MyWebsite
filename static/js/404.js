@@ -20,35 +20,34 @@ function splitTextIntoChars(container) {
 // Вызываем функцию для разбиения текста
 splitTextIntoChars($textElement);
 
-var chars = $copyContainer.find('.char'),
-    splitTextTimeline = new TimelineMax();
+var chars = $copyContainer.find('.char');
 
-// Анимация текста и курсора одновременно
+// Анимация текста и курсора
 function animateCopy() {
-  splitTextTimeline.clear(); // Очищаем временную шкалу
+  // Очищаем все символы и прячем их
+  chars.css('opacity', 0);
 
   chars.each(function(index, char) {
     var $char = $(char);
 
-    // Получаем точное положение символа
-    var charPosition = $char[0].getBoundingClientRect();
-    var containerPosition = $copyContainer[0].getBoundingClientRect();
-    var relativeX = charPosition.left - containerPosition.left;
-    var relativeY = charPosition.top - containerPosition.top;
+    // Получаем координаты символа относительно страницы
+    var charOffset = $char.offset();
 
-    splitTextTimeline.add([
-      // Анимация появления символа (замедлена до 0.2 сек)
-      TweenMax.fromTo($char, 0.2, {autoAlpha: 0}, {autoAlpha: 1, ease: Back.easeInOut.config(1.7)}),
-      // Анимация перемещения курсора (замедлена до 0.2 сек)
-      TweenMax.to($handle, 0.2, {x: relativeX, y: relativeY})
-    ]);
+    // Анимация появления символа и перемещение курсора
+    setTimeout(function() {
+      // Плавное появление символа
+      $char.css('transition', 'opacity 0.2s ease'); // Добавляем переход
+      $char.css('opacity', 1); // Показываем символ
+
+      // Плавное перемещение курсора
+      $handle.css({
+        top: charOffset.top + 'px',
+        left: (charOffset.left + $char.width()) + 'px'
+      });
+    }, 100 * index); // Задержка для каждого символа
   });
 }
 
-// Анимация мигания курсора
-function blinkHandle() {
-  TweenMax.fromTo($handle, 0.4, {autoAlpha: 0}, {autoAlpha: 1, repeat: -1, yoyo: true});
-}
 
 // Инициализация анимации при загрузке
 $(document).ready(function() {
@@ -58,11 +57,5 @@ $(document).ready(function() {
 
 // Повторная анимация по клику
 $replayIcon.on('click', function() {
-  splitTextTimeline.restart();
-});
-
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-      window.location.href = '/not-found/first-game';
-  }
+  animateCopy();
 });

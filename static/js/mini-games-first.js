@@ -187,4 +187,65 @@ document.addEventListener('keydown', function (e) {
     }
 });
 // Показ приветственного окна при загрузке страницы
+
+var touchStartX = 0;
+var touchStartY = 0;
+var touchEndX = 0;
+var touchEndY = 0;
+
+function handleTouchStart(evt) {
+    const firstTouch = evt.touches[0];                                
+    touchStartX = firstTouch.clientX;
+    touchStartY = firstTouch.clientY;
+}
+
+function handleTouchMove(evt) {
+    if (!touchStartX || !touchStartY) {
+        return;
+    }
+
+    touchEndX = evt.touches[0].clientX;
+    touchEndY = evt.touches[0].clientY;
+}
+
+function handleTouchEnd() {
+    var deltaX = touchEndX - touchStartX;
+    var deltaY = touchEndY - touchStartY;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        // Свайп по горизонтали
+        if (deltaX > 0 && snake.dx === 0) {
+            // Свайп вправо
+            snake.dx = grid;
+            snake.dy = 0;
+        } else if (deltaX < 0 && snake.dx === 0) {
+            // Свайп влево
+            snake.dx = -grid;
+            snake.dy = 0;
+        }
+    } else {
+        // Свайп по вертикали
+        if (deltaY > 0 && snake.dy === 0) {
+            // Свайп вниз
+            snake.dy = grid;
+            snake.dx = 0;
+        } else if (deltaY < 0 && snake.dy === 0) {
+            // Свайп вверх
+            snake.dy = -grid;
+            snake.dx = 0;
+        }
+    }
+
+    // Сброс координат после обработки свайпа
+    touchStartX = 0;
+    touchStartY = 0;
+    touchEndX = 0;
+    touchEndY = 0;
+}
+
+// Добавляем обработчики для событий касаний
+canvas.addEventListener('touchstart', handleTouchStart, false);
+canvas.addEventListener('touchmove', handleTouchMove, false);
+canvas.addEventListener('touchend', handleTouchEnd, false);
+
 showModal('welcomeModal');

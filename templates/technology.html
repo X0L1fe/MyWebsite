@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>technology</title>
+  <link rel="icon" href="{{ url_for('static', filename='images/logo_clear.png')}}"><!--иконка страницы-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nicepage.css')}}" media="screen">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/technology.css')}}" media="screen">
+  <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js')}}"
+    defer=""></script>
+  <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/nicepage.js')}}"
+    defer=""></script>
+  <meta name="generator" content="Nicepage 6.18.5, nicepage.com">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+
+  <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "MyWeb",
+		"logo": "{{ url_for('static', filename='images/logo.png')}}",
+		"sameAs": [
+				"https://t.me/Inrigt",
+				"https://vk.com/inrigt",
+				"https://github.com/X0L1fe",
+				"mailto:lighttolight228@gmail.com?cc=lighttolight228%40gmail.com"
+		]
+}</script>
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="technology">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+
+<body data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-xl-mode" data-lang="ru">
+  <header class="u-clearfix u-header u-sticky u-sticky-86e3 u-header" id="sec-0a59" data-animation-name=""
+    data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <a href="#" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
+        <img src="{{ url_for('static', filename='images/logo.png')}}" class="u-logo-image u-logo-image-1">
+      </a>
+      <nav class="u-menu u-menu-one-level u-menu-open-right u-offcanvas u-menu-1">
+        <div class="menu-collapse"
+          style="font-size: 1.125rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+          <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-white"
+            href="#" style="">
+            <svg class="u-svg-link" viewBox="0 0 24 24">
+              <use xlink:href="#menu-hamburger"></use>
+            </svg>
+            <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <rect y="1" width="16" height="2"></rect>
+                <rect y="7" width="16" height="2"></rect>
+                <rect y="13" width="16" height="2"></rect>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="u-custom-menu u-nav-container">
+          <ul class="u-nav u-spacing-2 u-unstyled u-nav-1">
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-hover-grey-50 u-text-white"
+                href="./" style="padding: 10px 20px;">Главная</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-hover-grey-50 u-text-white"
+                href="/about" style="padding: 10px 20px;">Стэк</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-hover-grey-50 u-text-white"
+                href="/contacts" style="padding: 10px 20px;">Контакты</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-hover-grey-50 u-text-white"
+                href="/technology" style="padding: 10px 20px;">Технологии</a>
+            </li>
+          </ul>
+        </div>
+        <div class="u-custom-menu u-nav-container-collapse">
+          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="u-inner-container-layout u-sidenav-overflow">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-custom-font u-heading-font u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./">Главная</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/about">Стэк</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/contacts">Контакты</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/technology">Технологии</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="u-black u-clearfix u-section-1" id="sec-ef6a">
+    <div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1">
+      <div
+        class="data-layout-selected u-clearfix u-expanded-width-lg u-expanded-width-sm u-expanded-width-xl u-expanded-width-xs u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-size-46">
+              <div class="u-layout-row">
+                <div class="u-container-style u-layout-cell u-shape-rectangle u-size-60 u-layout-cell-1">
+                  <div class="u-container-layout u-container-layout-1">
+                    <div class="u-shape u-shape-circle u-white u-shape-1"></div>
+                    <h5 class="u-align-left u-text u-text-1">Изученные технологии </h5>
+                    <p class="u-align-left u-heading-font u-text u-text-2">Языки программирования:</p>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-1">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width-lg u-expanded-width-sm u-expanded-width-xs u-radius u-shape u-shape-circle u-shape-2">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-3"><span
+                          class="u-file-icon u-icon u-text-white u-icon-1"><img src="{{ url_for('static', filename='images/1822921-10c671ae.png')}}"
+                            alt=""></span>&nbsp;​Python<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-2">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width-sm u-expanded-width-xs u-radius u-shape u-shape-circle u-shape-3">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-4"><span
+                          class="u-file-icon u-icon u-text-white u-icon-2"><img src="{{ url_for('static', filename='images/1163840-ac997aa2.png')}}"
+                            alt=""></span>&nbsp;​HTML<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-3">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-radius u-shape u-shape-circle u-shape-4">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-5"><span
+                          class="u-file-icon u-icon u-text-white u-icon-3"><img src="{{ url_for('static', filename='images/1078509-888f6c88.png')}}"
+                            alt=""></span>&nbsp;​CSS<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-4">
+                      <div
+                        class="custom-expanded u-border-2 u-border-white u-expanded-width-lg u-expanded-width-sm u-expanded-width-xl u-radius u-shape u-shape-circle u-shape-5">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default u-text-6"><span
+                          class="u-file-icon u-icon u-text-white u-icon-4"><img src="{{ url_for('static', filename='images/1492-e50f18fb.png')}}"
+                            alt=""></span>&nbsp;​JavaScript<br>
+                      </p>
+                    </div>
+                    <p class="u-align-left u-custom-font u-heading-font u-text u-text-7">Backend и фреймворки: </p>
+                    <div class="u-clearfix u-group-elements u-group-elements-5">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-radius u-shape u-shape-circle u-shape-6">
+                      </div>
+                      <p class="u-align-center u-text u-text-default-sm u-text-default-xs u-text-8"><span
+                          class="u-file-icon u-icon u-text-white u-icon-5"><img src="{{ url_for('static', filename='images/Flask_logo.svg-4e9df0ca.png')}}"
+                            alt=""></span>&nbsp;​​Flask<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-group-elements-6">
+                      <div class="u-border-2 u-border-white u-expanded-width u-radius u-shape u-shape-circle u-shape-7">
+                      </div>
+                      <p class="u-align-center u-text u-text-default-sm u-text-default-xs u-text-9"><span
+                          class="u-file-icon u-icon u-text-white u-icon-6"><img src="{{ url_for('static', filename='images/image3-c6e66343.png')}}"
+                            alt=""></span>&nbsp;​​Django<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-7">
+                      <div class="u-border-2 u-border-white u-expanded-width u-radius u-shape u-shape-circle u-shape-8">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-10"><span
+                          class="u-file-icon u-icon u-text-white u-icon-7"><img src="{{ url_for('static', filename='images/express-338b0978.png')}}"
+                            alt=""></span>&nbsp;​ExpressJS<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-8">
+                      <div class="u-border-2 u-border-white u-expanded-width u-radius u-shape u-shape-circle u-shape-9">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-11"><span
+                          class="u-file-icon u-icon u-text-white u-icon-8"><img src="{{ url_for('static', filename='images/5928855-d2b74459.png')}}"
+                            alt=""></span>&nbsp;​FastAPI<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-9">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width u-radius u-shape u-shape-circle u-shape-10">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-12"><span
+                          class="u-file-icon u-icon u-text-white u-icon-9"><img src="{{ url_for('static', filename='images/image1-b38f9d49.png')}}"
+                            alt=""></span>&nbsp;​NodeJS<br>
+                      </p>
+                    </div>
+                    <p class="u-align-left-lg u-align-left-xl u-custom-font u-heading-font u-text u-text-13">Базы данных
+                      и форматы данных: </p>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-10">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width u-radius u-shape u-shape-circle u-shape-11">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-14"><span
+                          class="u-file-icon u-icon u-text-white u-icon-10"><img src="{{ url_for('static', filename='images/csv-0cbe7f80.png')}}"
+                            alt=""></span>&nbsp;CSV
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-group-elements-11">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width u-radius u-shape u-shape-circle u-shape-12">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-15"><span
+                          class="u-file-icon u-icon u-text-white u-icon-11"><img src="{{ url_for('static', filename='images/image5-a63e7bec.png')}}"
+                            alt=""></span>&nbsp;PostgreSQL<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-group-elements-12">
+                      <div
+                        class="custom-expanded u-border-2 u-border-white u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-radius u-shape u-shape-circle u-shape-13">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-16"><span
+                          class="u-file-icon u-icon u-text-white u-icon-12"><img src="{{ url_for('static', filename='images/image6-1a8ae6ce.png')}}"
+                            alt=""></span>&nbsp;​Sqlite3<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-group-elements-13">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width u-radius u-shape u-shape-circle u-shape-14">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-17"><span
+                          class="u-file-icon u-icon u-text-white u-icon-13"><img src="{{ url_for('static', filename='images/image4-88838e76.png')}}"
+                            alt=""></span>&nbsp;JSON
+                      </p>
+                    </div>
+                    <p class="u-align-left-lg u-align-left-xl u-custom-font u-heading-font u-text u-text-18">Парсинг и
+                      тестирование: </p>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-14">
+                      <div
+                        class="custom-expanded u-border-2 u-border-white u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-radius u-shape u-shape-circle u-shape-15">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-19">
+                        <span class="u-file-icon u-icon u-text-white u-icon-14"><img src="{{ url_for('static', filename='images/image7-9a34f32a.png')}}"
+                            alt=""></span>&nbsp;PyTest
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-15">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width u-radius u-shape u-shape-circle u-shape-16">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-20">
+                        <span class="u-file-icon u-icon u-text-white u-icon-15"><img
+                            src="{{ url_for('static', filename='images/maxresdefault-e93e9239.png')}}" alt=""></span>&nbsp;Puppeteer
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-16">
+                      <div
+                        class="custom-expanded u-border-2 u-border-white u-expanded-width-lg u-expanded-width-sm u-expanded-width-xl u-radius u-shape u-shape-circle u-shape-17">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-21">
+                        <span class="u-file-icon u-icon u-icon-16"><img src="{{ url_for('static', filename='images/soup.png')}}"
+                            alt=""></span>&nbsp;​Beautiful Soup
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-17">
+                      <div
+                        class="custom-expanded u-border-2 u-border-white u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-radius u-shape u-shape-circle u-shape-18">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-22"><span
+                          class="u-file-icon u-icon u-text-white u-icon-17"><img src="{{ url_for('static', filename='images/image9-692970a1.png')}}"
+                            alt=""></span>&nbsp;Captcha
+                      </p>
+                    </div>
+                    <p class="u-align-left-lg u-align-left-xl u-custom-font u-heading-font u-text u-text-23">Библиотеки
+                      и инструменты Python: </p>
+                    <div class="u-clearfix u-group-elements u-valign-top-md u-group-elements-18">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-radius u-shape u-shape-circle u-shape-19">
+                      </div>
+                      <p class="u-align-justify u-custom-font u-heading-font u-text u-text-default u-text-24"><span
+                          class="u-file-icon u-icon u-text-white u-icon-18"><img src="{{ url_for('static', filename='images/pillow-d0e2f082.png')}}"
+                            alt=""></span>&nbsp;​Pillow<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-19">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-radius u-shape u-shape-circle u-shape-20">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-25">
+                        <span class="u-file-icon u-icon u-text-white u-icon-19"><img src="{{ url_for('static', filename='images/i-95805393.png')}}"
+                            alt=""></span>&nbsp;​TeleBot<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-group-elements-20">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-radius u-shape u-shape-circle u-shape-21">
+                      </div>
+                      <p
+                        class="u-align-justify u-custom-font u-heading-font u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-26">
+                        <span class="u-file-icon u-icon u-text-white u-icon-20"><img src="{{ url_for('static', filename='images/aio1-940f42a1.png')}}"
+                            alt=""></span>&nbsp;​Aiogram<br>
+                      </p>
+                    </div>
+                    <p class="u-align-left-lg u-align-left-xl u-heading-font u-text u-text-27">Прочие инструменты и
+                      подходы: </p>
+                    <div class="u-clearfix u-group-elements u-group-elements-21">
+                      <div
+                        class="custom-expanded u-border-2 u-border-white u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-radius u-shape u-shape-circle u-shape-22">
+                      </div>
+                      <p
+                        class="u-align-center-md u-align-center-sm u-align-center-xs u-align-justify-lg u-align-justify-xl u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-28">
+                        <span class="u-file-icon u-icon u-text-white u-icon-21"><img src="{{ url_for('static', filename='images/image10-0c08d8aa.png')}}"
+                            alt=""></span>&nbsp;​Docker<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-22">
+                      <div
+                        class="custom-expanded u-border-2 u-border-white u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-radius u-shape u-shape-circle u-shape-23">
+                      </div>
+                      <p
+                        class="u-align-justify u-custom-font u-heading-font u-text u-text-default-sm u-text-default-xs u-text-29">
+                        <span class="u-file-icon u-icon u-text-white u-icon-22"><img src="{{ url_for('static', filename='images/image11-71f3434b.png')}}"
+                            alt=""></span>&nbsp;​REST API<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-23">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-expanded-width-xs u-radius u-shape u-shape-circle u-shape-24">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-30">
+                        <span class="u-file-icon u-icon u-text-white u-icon-23"><img src="{{ url_for('static', filename='images/7190542-5dd18044.png')}}"
+                            alt=""></span>&nbsp;​Git<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-24">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-radius u-shape u-shape-circle u-shape-25">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-31"><span
+                          class="u-file-icon u-icon u-text-white u-icon-24"><img src="{{ url_for('static', filename='images/image13-119701a1.png')}}"
+                            alt=""></span>&nbsp;​Pydantic<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-valign-top-md u-group-elements-25">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width u-radius u-shape u-shape-circle u-shape-26">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-sm u-text-default-xs u-text-32"><span
+                          class="u-file-icon u-icon u-text-white u-icon-25"><img src="{{ url_for('static', filename='images/image12-0e35b3fa.png')}}"
+                            alt=""></span>&nbsp;​JWt<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-group-elements-26">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width u-radius u-shape u-shape-circle u-shape-27">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-33">
+                        <span class="u-file-icon u-icon u-text-white u-icon-26"><img src="{{ url_for('static', filename='images/jinja-179e4084.png')}}"
+                            alt=""></span>&nbsp;​Jinja<br>
+                      </p>
+                    </div>
+                    <div class="u-clearfix u-group-elements u-preserve-proportions u-group-elements-27">
+                      <div
+                        class="u-border-2 u-border-white u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-radius u-shape u-shape-circle u-shape-28">
+                      </div>
+                      <p class="u-align-justify u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-34">
+                        <span class="u-file-icon u-icon u-text-white u-icon-27"><img src="{{ url_for('static', filename='images/oop-b869a8f2.png')}}"
+                            alt=""></span>&nbsp;​OOP<br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-size-14">
+              <div class="u-layout-col">
+                <div
+                  class="u-align-center u-container-align-center u-container-align-center-lg u-container-align-center-md u-container-align-center-sm u-container-align-center-xl u-container-style u-layout-cell u-size-60 u-layout-cell-2">
+                  <div class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-container-layout-2">
+                    <img class="custom-expanded u-expanded-width-lg u-expanded-width-xl u-image u-image-1"
+                      src="{{ url_for('static', filename='images/coffee-pc.png')}}" data-image-width="338" data-image-height="339">
+                    <div class="u-shape u-shape-circle u-white u-shape-29"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="u-align-center u-clearfix u-container-align-center u-custom-color-1 u-footer u-footer" id="sec-b4ad">
+    <div
+      class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+      <div
+        class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <div class="u-social-icons u-spacing-10 u-social-icons-1">
+          <a class="u-social-url" title="Telegram" target="_blank" href="https://t.me/Inrigt"><span
+              class="u-file-icon u-icon u-social-facebook u-social-icon u-icon-1"><img
+                src="{{ url_for('static', filename='images/image.png')}}" alt=""></span>
+          </a>
+          <a class="u-social-url" title="VK" target="_blank" href="https://vk.com/inrigt"><span
+              class="u-file-icon u-icon u-social-icon u-social-twitter u-icon-2"><img
+                src="{{ url_for('static', filename='images/image2.png')}}" alt=""></span>
+          </a>
+          <a class="u-social-url" title="github" target="_blank" href="https://github.com/X0L1fe"><span
+              class="u-file-icon u-icon u-social-icon u-social-instagram u-icon-3"><img
+                src="{{ url_for('static', filename='images/github1.png')}}" alt=""></span>
+          </a>
+          <a class="u-social-url" target="_blank" data-type="Custom" title="E-mail"
+            href="mailto:lighttolight228@gmail.com?cc=lighttolight228%40gmail.com"><span
+              class="u-file-icon u-icon u-social-custom u-social-icon u-icon-4"><img
+                src="{{ url_for('static', filename='images/email.png')}}" alt=""></span>
+          </a>
+        </div>
+        <div class="u-clearfix u-group-elements u-group-elements-1">
+          <p class="u-custom-font u-heading-font u-small-text u-text u-text-variant u-text-1">Контакты</p>
+          <p class="u-align-justify u-text u-text-2">
+            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-text-white u-btn-1"
+              data-href="#" href="https://vk.com/inrigt"><span class="u-file-icon u-icon u-icon-5"><img
+                  src="{{ url_for('static', filename='images/image2.png')}}" alt=""></span>&nbsp;VK
+            </a>
+          </p>
+          <p class="u-align-justify u-text u-text-3">
+            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-text-white u-btn-2"
+              data-href="#" href="mailto:lighttolight228@gmail.com"><span class="u-file-icon u-icon u-icon-6"><img
+                  src="{{ url_for('static', filename='images/email.png')}}" alt=""></span>&nbsp;​E-mail
+            </a>
+          </p>
+          <p class="u-align-justify u-text u-text-4">
+            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-text-white u-btn-3"
+              data-href="#" href="https://t.me/Inrigt" target="_blank"><span class="u-file-icon u-icon u-icon-7"><img
+                  src="{{ url_for('static', filename='images/image.png')}}" alt=""></span>&nbsp;Telegram
+            </a>
+          </p>
+        </div>
+        <div class="u-clearfix u-group-elements u-group-elements-2">
+          <a href="#" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
+            <img src="{{ url_for('static', filename='images/logo.png')}}" class="u-logo-image u-logo-image-1">
+          </a>
+          <p class="u-align-right u-custom-font u-heading-font u-text u-text-5">Данный сайт предоставляет подробную
+            информацию о разработчике и является его собственностью.</p>
+          <p class="u-custom-font u-heading-font u-text u-text-6"> © 2024 Роман (X0L1fe) Лифанов</p>
+        </div>
+        <div class="u-clearfix u-group-elements u-group-elements-3">
+          <p class="u-heading-font u-text u-text-7">Навигация по сайту: </p>
+          <a href="./"
+            class="u-active-none u-border-none u-btn u-button-style u-custom-font u-heading-font u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-btn-4">Главная</a>
+          <a href="/about"
+            class="u-active-none u-border-none u-btn u-button-style u-custom-font u-heading-font u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-btn-5">Стэк
+            технологий</a>
+          <a href="/contacts"
+            class="u-active-none u-border-none u-btn u-button-style u-custom-font u-heading-font u-hover-none u-none u-text-active-palette-2-base u-text-hover-grey-40 u-btn-6">Контакты</a>
+        </div>
+        <p class="u-heading-font u-text u-text-8"> Политики конфиденциальности и Условий использования</p>
+      </div>
+  </footer>
+</body>
+
+</html>

@@ -12,6 +12,18 @@ app.secret_key = SECRET_KEY
 def index():
     return render_template('index.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contacts')
+def contacts():
+    return render_template('contacts.html')
+
+@app.route('/technology')
+def technology():
+    return render_template('technology.html')
+
 @app.route('/not-found/first-game')# Змейка
 def first_game():
     if 'visited_404' in session and session['visited_404']:
@@ -26,4 +38,4 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000,debug=True)
